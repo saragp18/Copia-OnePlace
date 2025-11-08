@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home.tsx'
-import NewPage from './pages/NewPage.tsx'
+import NewPage from './pages/newPage.tsx'
 import CategoriesPage from './pages/categoriesPage.tsx'
+import ManPage from './pages/ManPage.tsx'
 
 const Routes= createBrowserRouter([{
   path:"/",
@@ -26,6 +27,9 @@ const Routes= createBrowserRouter([{
 },{
   path:"/collection",
   element: <h2> Collection page</h2>
+},{
+  path:"/men",
+  element: <ManPage/>
 }])
 
 createRoot(document.getElementById('root')!).render(
