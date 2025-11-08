@@ -6,7 +6,7 @@ function Inspire() {
                 <img
                     src="/img/Inspire.jpg"
                     alt="Collage of urban outfits"
-                    className="w-full h-auto rounded-lg object-cover"
+                    className="w-full h-auto object-cover"
                 />
             </div>
 
