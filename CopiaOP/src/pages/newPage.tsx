@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 import HeroNewPage from "../components/HeroNewPage";
 import NewItemsSection from "../components/NewItem";
+import Advisor from "../components/advisor";
+import Footer from "../components/Footer";
 
 function NewPage() {
   return (
@@ -9,6 +11,7 @@ function NewPage() {
         <Navbar />
         <HeroNewPage/>
         <NewItemsSection />
+        <Footer/>
 
     </div>
 );
