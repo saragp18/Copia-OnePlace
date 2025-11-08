@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home.tsx'
 import NewPage from './pages/NewPage.tsx'
+import CategoriesPage from './pages/categoriesPage.tsx'
 
 const Routes= createBrowserRouter([{
   path:"/",
@@ -15,7 +16,7 @@ const Routes= createBrowserRouter([{
 },
 {
   path:"/categories",
-  element: <h2> Categories page</h2>
+  element: <CategoriesPage />
 },{
   path:"/moresells",
   element: <h2> More Sells page</h2>
