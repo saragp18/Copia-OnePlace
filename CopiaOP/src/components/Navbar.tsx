@@ -1,95 +1,82 @@
-import { useState } from "react";
+import Logo from "/img/LOGO BOLSO 2.png";
+import LookIcon from "/img/lupa.png";
+import CartIcon from "/img/cart.png";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <nav className="bg-gray-50 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <img
-              src="/img/OnePlaceLogo1.svg"
-              alt="Logo OnePlace"
-              className="w-12 h-12"
-            />
-            <span className="font-medium text-gray-800">ONEPLACE</span>
-          </div>
-
-          {/* Links (centered) */}
-          <div className="hidden md:flex space-x-8 text-sm font-medium text-gray-800">
-            <a href="#" className="hover:text-gray-500">
-              HOME
-            </a>
-            <a href="#" className="hover:text-gray-500">
-              NEW
-            </a>
-            <a href="#" className="hover:text-gray-500">
-              CATEGORIES
-            </a>
-            <a href="#" className="hover:text-gray-500">
-              MORE SELLS
-            </a>
-            <a href="#" className="hover:text-gray-500">
-              SELL
-            </a>
-          </div>
-
-          {/* Search + Cart */}
-          <div className="hidden md:flex items-center space-x-6 text-gray-800">
-            <div className="flex items-center space-x-1">
-              <span className="text-sm text-gray-500">Look for</span>
-              <img
-                src="/img/Lupa.svg"
-                alt="Buscar"
-                className="w-5 h-5 cursor-pointer"
-              />
-            </div>
-            <div className="flex items-center space-x-1 cursor-pointer">
-              <span className="text-sm text-gray-500">cart</span>
-              <img
-                src="/img/Carrito.png"
-                alt="Carrito"
-                className="w-5 h-5"
-              />
-            </div>
-          </div>
-
-          {/* Botón móvil */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-800 focus:outline-none"
-            >
-              <img src="/img/MenuHamburguesa.jpg" alt="Menú" className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
+    <header className="relative w-full flex items-center justify-between px-4 sm:px-6 py-3">
+      
+      <div className="flex items-center space-x-2 sm:space-x-3">
+        <img
+          src={Logo}
+          alt="OnePlace Logo"
+          className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+        />
+        <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide text-black">
+          ONEPLACE
+        </p>
       </div>
 
-      {/* Menú móvil */}
-      {isOpen && (
-        <div className="md:hidden bg-gray-100 px-4 py-3 space-y-2">
-          <a href="#" className="block text-gray-800">
+      
+      <nav
+        className="
+          absolute left-1/2 transform -translate-x-1/2
+          flex space-x-3 sm:space-x-5
+          text-xs sm:text-sm lg:text-base font-medium text-gray-800
+        "
+      >
+        <NavLink to={"/home"}>
+          <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
             HOME
-          </a>
-          <a href="#" className="block text-gray-800">
-            NEW
-          </a>
-          <a href="#" className="block text-gray-800">
-            CATEGORIES
-          </a>
-          <a href="#" className="block text-gray-800">
-            MORE SELLS
-          </a>
-          <a href="#" className="block text-gray-800">
-            SELL
-          </a>
-        </div>
-      )}
-    </nav>
+          </button>
+        </NavLink>
+
+        <NavLink to="/new">
+        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors cursor-pointer">
+          NEW
+        </button>
+        </NavLink>
+
+        <NavLink to="/categories">
+        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
+          CATEGORIES
+        </button>
+        </NavLink>
+
+        <NavLink to="/moresells">
+        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
+          MORE SELLS
+        </button>
+        </NavLink>
+
+        <NavLink to="/sell">
+        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
+          SELL
+        </button>
+        </NavLink>
+      </nav>
+
+      
+      <div className="flex items-center space-x-3 sm:space-x-4">
+        <button className="flex items-center space-x-2 hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
+          <span>Look for</span>
+          <img
+            src={LookIcon}
+            alt="Look Icon"
+            className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
+          />
+        </button>
+        <button className="flex items-center space-x-2 hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
+          <span>Cart</span>
+          <img
+            src={CartIcon}
+            alt="Cart Icon"
+            className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
+          />
+        </button>
+      </div>
+    </header>
   );
 }
 

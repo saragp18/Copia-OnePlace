@@ -1,8 +1,7 @@
-
 function Footer() {
   return (
     <footer className="bg-gray-100 px-16 py-12 font-sans">
-      {/* Sección superior con el newsletter */}
+      
       <div className="bg-gray-400 p-10 rounded-2xl flex flex-wrap justify-between items-center">
         <div className="max-w-xl">
           <h2 className="text-3xl font-extrabold text-black">
@@ -12,7 +11,7 @@ function Footer() {
 
         <div className="flex flex-col gap-3 mt-6 md:mt-0">
           <div className="flex items-center bg-white rounded-full px-4 py-2">
-            <img src="/img/email.jpg" alt="email icon" className="w-8 h-8 mr-2" />
+            <img src="/img/email.png" alt="email icon" className="w-8 h-8 mr-2" />
             <input
               type="email"
               placeholder="Enter your email address"
@@ -25,7 +24,7 @@ function Footer() {
         </div>
       </div>
 
-      {/* Sección media con los enlaces */}
+      
       <div className="flex flex-wrap justify-between mt-12 text-gray-700">
         <div className="max-w-sm">
           <p>
@@ -34,8 +33,8 @@ function Footer() {
           </p>
           <div className="flex gap-4 mt-4">
             <img src="/img/Twitter.jpg" alt="Twitter" className="w-6 h-6" />
-            <img src="/img/Facebook.png" alt="Facebook" className="w-6 h-6" />
-            <img src="/img/Instagram.png" alt="Instagram" className="w-6 h-6" />
+            <img src="/img/Facebook.jpg" alt="Facebook" className="w-6 h-6" />
+            <img src="/img/Instagram.jpg" alt="Instagram" className="w-6 h-6" />
             <img src="/img/Github.jpg" alt="GitHub" className="w-6 h-6" />
           </div>
         </div>
@@ -81,18 +80,18 @@ function Footer() {
         </div>
       </div>
 
-      {/* Línea divisoria */}
+      
       <hr className="my-10 border-gray-300" />
 
-      {/* Sección final */}
+      
       <div className="flex flex-wrap justify-between items-center text-gray-500">
-        <p>OnePlace.co © 2000–2023, All Rights Reserved</p>
+        <p>OnePlace.co © 2025, All Rights Reserved</p>
         <div className="flex gap-3 mt-3 md:mt-0">
-          <img src="/img/Visa.jpg" alt="Visa" className="w-10" />
-          <img src="/img/Mastercard.jpg" alt="Mastercard" className="w-10" />
-          <img src="/img/Paypal.jpg" alt="Paypal" className="w-10" />
-          <img src="/img/ApplePay.png" alt="Apple Pay" className="w-10" />
-          <img src="/img/GooglePay.jpg" alt="Google Pay" className="w-10" />
+          <img src="/img/Visa.jpg" alt="Visa" className="w-20 h-15" />
+          <img src="/img/Mastercard.jpg" alt="Mastercard" className="w-20 h-15" />
+          <img src="/img/Paypal.jpg" alt="Paypal" className="w-20 h-15" />
+          <img src="/img/ApplePay.png" alt="Apple Pay" className="w-20 h-15" />
+          <img src="/img/GooglePay.png" alt="Google Pay" className="w-20 h-15" />
         </div>
       </div>
     </footer>

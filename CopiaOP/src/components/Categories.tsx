@@ -1,4 +1,4 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
 
 const categories = [
   { name: "WOMEN", image: "/img/Mujer.jpg" },
@@ -24,14 +24,14 @@ const Categories = () => {
             key={category.name}
             className="relative group overflow-hidden rounded-3xl cursor-pointer"
           >
-            {/* Imagen */}
-            <img
-              src={category.image}
-              alt={category.name}
-              className="w-full h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
-            />
+            <NavLink to="/categories">
+              <img
+                src={category.image}
+                alt={category.name}
+                className="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </NavLink>
 
-            {/* Caja blanca en las esquinas */}
             <div
               className={`absolute ${
                 index % 2 === 0 ? "bottom-0 left-0" : "bottom-0 right-0"
@@ -45,7 +45,7 @@ const Categories = () => {
         ))}
       </div>
 
-      <button className="mt-14 px-8 py-3 rounded-full bg-black text-white text-sm tracking-widest hover:bg-gray-800 transition-colors">
+      <button className="mt-14 px-8 py-3 rounded-full bg-black text-white text-sm tracking-widest hover:bg-gray-500 transition-colors">
         LOAD MORE
       </button>
     </section>

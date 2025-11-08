@@ -12,7 +12,7 @@ const setups = [
 // Duplicamos las imágenes para lograr el loop continuo
 const repeatedSetups = [...setups, ...setups];
 
-export default function CollageVass() {
+export default function NewItems() {
   return (
     <section className="bg-white py-20 overflow-hidden">
        <h2 className="text-base tracking-[2px] mb-12 font-semibold text-gray-900 text-center">
@@ -25,7 +25,7 @@ export default function CollageVass() {
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             repeat: Infinity,
-            duration: 30, // velocidad del loop
+            duration: 30, 
             ease: "linear",
           }}
         >
@@ -36,7 +36,7 @@ export default function CollageVass() {
             >
               <img
                 src={setup.src}
-                alt={`vass-${setup.id}`}
+                alt={`img-${setup.id}`}
                 className="w-full h-[250px] object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
